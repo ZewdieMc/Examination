@@ -1,0 +1,52 @@
+....
+....
+get name detals and generic question param
+display the first question.//??? with previous disabled.
+.....
+if(next):
+	get next quest_id()
+elseif(previvous):
+	get previous quest_id()
+
+get the question from the tbl_question using where clause
+
+
+REWRITE THE QUESTIONS.PHP FILE
+
+=======today=====
+
+
+why is previous decrementing by 2?
+add images in question.|/
+
+
+ADMIN ---adds
+			+Facutlies
+			+Faculty deans
+Faculty---adds
+			+Departments
+			+Department heads
+		---view
+			+View exams along with their status.
+Dept hd---adds
+			+Student
+			+Teacher
+			+Course
+			+Invigilator
+teacher---prepares
+			+Question
+		---activates exam on the exam time
+			+Exam
+		---view 
+			+Invigilation status
+student ---takes
+			+Exam
+		---views
+			+Result
+
+			  	/*
+					        select * from tbl_question join exam where question.exam_id = ? exam.status =?(ON/OFF)
+					        exam table contains which course. which department, whcih faculty.
+					        each of of the table contains exam_id
+					        each question in the questions table have exam_id
+			  	*/

@@ -1,0 +1,448 @@
+/*
+Theme Name: Test Preparation App Ro Beyond Boundaries
+Author: VIjay Thapa
+Author URI: http://www.vijaythapa.com.np
+Version: 1.0
+*/
+/*CSS FOR ALL*/
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: arial, sans-serif;
+    line-height: 25px;
+}
+
+.wrapper{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+/*CSS FOR COUNTER*/
+.timer, .timer-done, .timer-loop {
+            font-size: 30px;
+            color: black;
+            font-weight: bold;
+            padding: 10px;
+            float: right;
+          }
+          .jst-hours {
+            float: left;
+          }
+          .jst-minutes {
+            float: left;
+          }
+          .jst-seconds {
+            float: left;
+          }
+          .jst-clearDiv {
+            clear: both;
+          }
+          .jst-timeout {
+            color: red;
+          }
+
+/*CSS for Header*/
+.header{
+    background-color: #006400;
+    color: #FFFFFF;
+}
+.header .wrapper .logo{
+    width: 20%;
+    float: left;
+}
+.header .wrapper .logo img{
+    width: 100%;
+}
+.header .wrapper .head-title{
+    width: 80%;
+}
+.header .wrapper .head-title h1{
+    font-weight: lighter;
+    line-height: 60px;
+    text-align: center;
+}
+
+/*CSS for Navigation*/
+.menu .wrapper ul{
+    list-style-type: none;
+}
+.menu .wrapper ul a{
+    color: #006400;
+    text-decoration: none;
+    padding: 1%;
+}
+.menu .wrapper ul a:hover{
+    background-color: #006400;
+    color: #FFFFFF;
+    transition: all 0.5s ease;
+}
+.menu .wrapper ul li{
+    display: inline;
+}
+
+/*CSS for Main*/
+.main{
+    margin: 2% 0;
+}
+.main .content{
+    border: 1px solid silver;
+    width: 80%;
+    padding: 1%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px silver;
+}
+.main .content .welcome{
+    margin: 2% auto;
+    text-align: center;
+    font-size: 120%;
+    line-height: 50px;
+}
+.main .content .welcome .ques{
+    text-align: left;
+}
+.main .content .welcome .radio-ans{
+    font-size: 90%;
+    line-height: 35px;
+}
+
+ .heavy{
+    color: #b73a00;
+    font-weight: bold;
+}
+.dash-tile{
+    width: 21%;
+    background-color: #E65D5D;
+    color: #FFFFFF;
+    margin: 1%;
+    padding: 5% 1%;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    cursor: pointer;
+}
+.dash-tile:hover{
+    box-shadow: 0 0 5px 1px black;
+}
+.success{
+    border: 1px solid #388E3C;
+    background-color: #AED581;
+    color: #388E3C;
+    font-size: 90%;
+    padding: 1%;
+    margin: 1%;
+}
+.error{
+    border: 1px solid #B71C1C;
+    background-color: #E57373;
+    color: ;
+    font-size: 90%;
+    padding: 1%;
+    margin: 1%;
+}
+
+/* CSS FOR REPORT*/
+.main .content .report{
+    color: #4f4d4d;
+    line-height: 50px;
+}
+.main .content .report table{
+    width: 100%;
+    margin: 1% 0;
+    text-align: left;
+}
+.main .content .report table tr td{
+    border-bottom: 1px solid black;
+    border-collapse: collapse;
+    padding:  1% 0;
+}
+.main .content .report .forms{
+    padding: 2%;
+    line-height: 40px;
+}
+.main .content .report .forms .name{
+    width: 15%;
+    float: left;
+}
+.main .content .report .forms h2{
+    margin-bottom: 2%;
+}
+.main .content .report .forms input[type='text'],.main .content .report .forms input[type='email'],
+.main .content .report .forms input[type='tel'],.main .content .report .forms input[type='number'],
+.main .content .report .forms input[type='password']{
+    padding: 0.5%;
+    width: 30%;
+}
+.note{
+    color: black;
+    font-size: 90%;
+}
+.main .content .report .forms textarea{
+    width: 30%;
+    height: 100px;
+    padding: 0.5%;
+}
+
+.main .content .report .forms select{
+    width: 31.5%;
+    padding: 1%;
+}
+.main .content .report .forms img{
+    width: 550px;
+}
+
+.login{
+    width: 20%;
+    padding: 1%;
+    margin: 0 auto;
+    box-shadow: 0 0 1px 1px silver;
+}
+.login input[type='text'],.login input[type='password']{
+    padding: 1%;
+    width: 97%;
+    margin: 1% 0;
+    font-size: 100%;
+}
+.login input[type='submit'],.login input[type='reset']{
+    width: 100%;
+    margin: 1% 0;
+    height: 40px;
+}
+.login h2{
+    color: #4f4d4d;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+
+
+/*CSS FOR BUTTONS*/
+.btn-go{
+    background-color: #00b72a;
+    color: #FFFFFF;
+    font-size: 100%;
+    font-weight: normal;
+    padding: 1%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-go:hover{
+    background-color: #01721b;
+}
+
+.btn-exit{
+    background-color: #9e0303;
+    color: #FFFFFF;
+    font-size: 100%;
+    font-weight: normal;
+    padding: 1%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-exit:hover{
+    background-color: #720202;
+}
+
+.btn-add{
+    background-color: #085be0;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-add:hover{
+    background-color: #074fc1;
+}
+
+.btn-update{
+    background-color: #00b72a;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-update:hover{
+    background-color: #01721b;
+}
+.btn-delete{
+    background-color: #9e0303;
+    color: #FFFFFF;
+    font-size: 90%;
+    font-weight: normal;
+    padding: 0.5%;
+    margin: 0 1%;
+    border: none;
+    cursor: pointer;
+}
+.btn-delete:hover{
+    background-color: #720202;
+}
+/*CSS for Footer*/
+.footer{
+
+    background-color: #006400;
+    color: #FFFFFF;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+.footer p{
+    text-align: center;
+}
+.footer p a{
+    color: #A1CD3C;
+    text-decoration: none;
+}
+.footer p a:hover{
+    color: #F5E923;
+}
+/*CSS for Questions and Answers*/
+.left-ques
+{
+    width: 45%;
+    float: left;
+    text-align: left;
+}
+.answers{
+    width: 50%;
+    float: right;
+    text-align: left;
+}
+.left-ques img{
+    width: 99%;
+}
+.buttons{
+    width: 90%;
+    text-align: center;
+}
+
+/*CSS to Make Responsive*/
+
+/*CSS for Tablet View*/
+@media only screen and (max-width: 768px)
+{
+    .wrapper{
+        width: 90%;
+    }
+    .header .wrapper .logo{
+        width: 100%;
+        text-align: center;
+        float: none;
+    }
+    .header .wrapper .logo img{
+        width: 100%;
+    }
+    .header .wrapper .head-title{
+        width: 100%;
+    }
+    .header .wrapper .head-title h1{
+        line-height: 30px;
+        text-align: center;
+    }
+    /*Menu CSS Here*/
+    .menu .wrapper ul li{
+        display: block;
+    }
+    .menu .wrapper ul{
+        text-align: center;
+    }
+    .menu .wrapper ul a{
+        padding: 0%;
+    }
+    .menu .wrapper ul a:hover{
+        background-color: green;
+        color: white;
+    }
+    .main .content{
+        width: 90%;
+    }
+    .dash-tile{
+        width: 46%;
+    }
+    .main .content .report .forms .name{
+        width: 25%;
+        float: left;
+    }
+    .main .content .report .forms h2{
+        margin-bottom: 2%;
+    }
+    .main .content .report .forms input[type='text'],.main .content .report .forms input[type='email'],
+    .main .content .report .forms input[type='tel'],.main .content .report .forms input[type='number'],
+    .main .content .report .forms input[type='password']{
+        padding: 0.5%;
+        width: 70%;
+    }
+    .note{
+        color: black;
+        font-size: 90%;
+    }
+    .main .content .report .forms textarea{
+        width: 70%;
+        height: 100px;
+        padding: 0.5%;
+    }
+    
+    .main .content .report .forms select{
+        width: 73%;
+        padding: 1%;
+    }
+    .login
+    {
+        width: 50%;
+    }
+}
+
+/*CSS for Mobile View*/
+@media only screen and (max-width: 480px)
+{
+    .header .wrapper .head-title h1{
+        font-size: 120%;
+    }
+    .dash-tile{
+        width: 95%;
+    }
+    .main .content .report .forms .name{
+        width: 100%;
+    }
+    .main .content .report .forms input[type='text'],.main .content .report .forms input[type='email'],
+    .main .content .report .forms input[type='tel'],.main .content .report .forms input[type='number'],
+    .main .content .report .forms input[type='password']{
+        padding: 0.5%;
+        width: 98%;
+    }
+    .note{
+        color: black;
+        font-size: 90%;
+    }
+    .main .content .report .forms textarea{
+        width: 98%;
+        height: 100px;
+        padding: 0.5%;
+    }
+    
+    .main .content .report .forms select{
+        width: 98%;
+        padding: 1%;
+    }
+    .login
+    {
+        width: 80%;
+    }
+    
+}
