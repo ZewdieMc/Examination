@@ -22,7 +22,8 @@
         
         <!--ADDING CKEDITOR HERE-->
         <script type="text/javascript" src="<?php echo SITEURL; ?>/assets/ckeditor/ckeditor.js"></script>
-        
+        <!-- Jquery  -->
+        <script style="text/javascript" src="<?php echo SITEURL;?>/assests/js/jquery-3.6.0.js"></script>
         <!--CSS File Starts Here-->
         <link rel="stylesheet" type="text/css" href="<?php echo SITEURL;?>/assets/bootstrap2/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="<?php echo SITEURL;?>/assets/fontawesome-free/css/all.min.css">
