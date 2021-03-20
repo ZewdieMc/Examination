@@ -2,8 +2,6 @@
 #global variables
 #session_destroy();
 #echo $_SESSION['sn'];
-$myfile = fopen("testfile.txt", "w");
-$_SESSION['res'] = null;
 
 if (!isset($_SESSION['prev_disabled'])) {
     $_SESSION['prev_disabled'] = "disabled";
@@ -71,10 +69,10 @@ if (!isset($_SESSION['end_time'])) {
         $timeDifference = $startTime - $currentTime;
 
         ?>
-        <span class=" badge-warning timer" style="border-radius: 5px;" data-seconds-left=<?php echo $timeDifference; ?>></span>
+        <span class='badge-warning timer' style="border-radius: 5px;" data-seconds-left=<?php echo $timeDifference; ?>></span>
     </div>
-    <!-- middle part which contains information about question and it's answer options -->
-    <form method="post">
+    <!-- The question and its answer options -->
+    <form method="post" action="">
         <div class="row" id="question">
             <!-- question -->
             <div class="col">
@@ -128,7 +126,7 @@ if (!isset($_SESSION['end_time'])) {
                 ?>
             </div>
             <!-- answer options -->
-            <div class="col">
+            <div class="col-lg-4">
                 <input type="radio" name="answer" value="1" required="true" /> <span class="radio-ans"><?php echo $first_answer; ?></span>
                 <hr /><br />
                 <input type="radio" name="answer" value="2" required="true" /> <span class="radio-ans"><?php echo $second_answer; ?></span>
@@ -143,6 +141,7 @@ if (!isset($_SESSION['end_time'])) {
                     <input type="hidden" name="right_answer" value="<?php echo $answer; ?>" />
                     <input type="hidden" name="marks" value="<?php echo $marks; ?>" />
             </div>
+
         </div>
 
         <div class="row" style="margin-bottom: 10px">
@@ -155,23 +154,6 @@ if (!isset($_SESSION['end_time'])) {
             </div>
         </div>
     </form>
-    <script>
-        function getPrevious(str) {
-            if (str == '') {
-                document.getElementById('question').innerHTML = '';
-                return;
-            } else {
-                var xmlhttp = new XMLHttpRequest();
-                xmlhttp.onreadystatechange = function() {
-                    if (this.readyState == 4 && this.status == 200) {
-                        document.getElementById("question").innerHTML = this.responseText;
-                    }
-                };
-                xmlhttp.open("GET", "view_question.php?q=" + str, true);
-                xmlhttp.send();
-            }
-        }
-    </script>
     <?php
     if (isset($_POST['next'])) {
         #save the values into db and getback to the page....
