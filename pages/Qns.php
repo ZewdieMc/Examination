@@ -11,7 +11,7 @@ echo $id;
 
 <div class="container">
     <div class="row">
-        <br>
+        <br><br>
         <div class="col"><button onclick='getPrevious()' name="previous" class="btn btn-lg btn-success" formnovalidate>&laquo; Previous</button></div>
         <div class="col"><button name="next" class="btn btn-lg btn-success">&nbsp;&nbsp;&nbsp;&nbsp;Next&nbsp; &raquo; </button></div>
     </div>
