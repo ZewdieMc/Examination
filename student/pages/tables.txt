@@ -1,0 +1,129 @@
+
+ADMIN(TABLE)(actor)===================================>
+ att: id 
+	  first_name
+	  last_name
+	  username
+	  password
+opt:	 ---adds
+			+Facutlies
+			+Faculty deans
+FACULTY(TABLE)===================================>
+att:
+	id
+	faculty_name
+	faculty_desc
+	faculty_location
+
+FACULTY_DEAN(TABLE)(actor):===================================>
+	att:
+		id
+		first_name
+		last_name
+		faculty_id
+		username
+		password
+
+opt:	---adds
+			+Departments
+			+Department heads
+		---view
+			+ exams along with their status.
+DEPARTMENT(TABLE)===================================>
+	att:
+		id
+		department_name
+		faculty_id
+
+DEPARTMENT HEAD(TABLE)(actor)===================================>
+	att:
+		id;
+		first_name
+		last_name
+		department_id;
+		username
+		password
+opt:	
+		---adds
+			+Student
+			+Teacher
+			+Course
+			+Invigilator
+		---view
+			+ exams along with their status.
+TEACHER(TABLE)(actor)===================================>
+	att:
+		id
+		first_name
+		last_name
+		department_id
+		username
+		password
+	opt:
+		---prepares
+			+Question
+		---activates exam on the exam time
+			+Exam
+		---view 
+			+Invigilation status
+STUDENT(TABLE)(actor)===================================>
+	att:
+		id
+		first
+		last_name
+		username
+		email
+		is_active
+		department_id
+	opt:
+		 ---takes
+			+Exam
+		---views
+			+Result
+COURSE(TABLE)===================================>
+att:	
+	id
+	course_code
+	course_name
+	department_id
+	teacher_id
+
+EXAM(TABLE)===================================>
+att:
+	exam_id 
+	course_id
+	time_duration
+	total_questions
+
+
+QUESTION(TABLE)===================================>
+att:
+	quest_id
+	question_type#######later
+	question
+	first_answer
+	second_answer
+	third_answer
+	fourth_answer
+	fifth_answer
+	explanation
+	marks
+	exam_id
+
+RESULT(TABLE)===================================>
+att:
+	result_id
+	student_id
+	question_id
+	student_answer
+	right_answer
+
+
+
+
+			  	/*
+					        select * from tbl_question join exam where question.exam_id = ? exam.status =?(ON/OFF)
+					        exam table contains which course. which department, whcih faculty.
+					        each of of the table contains exam_id
+					        each question in the questions table have exam_id
+			  	*/

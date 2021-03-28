@@ -9,4 +9,8 @@
                 </center>
             </footer>
         <!--Footer Ends Here-->
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 5063ec49dac15e7482e59e4d19d84a508012281c
